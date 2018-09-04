@@ -1,0 +1,34 @@
+# Visual Studio files
+
+*.ipch
+*.sdf
+*.opensdf
+*.lastbuildstate
+*.log
+*.tlog
+*.idb
+*.pdb
+*.suo
+
+# Binaries
+
+*.o
+*.a
+
+# Directories
+
+lib/
+bin/
+Debug/
+Release/
+build/
+.vs/
+
+CMakeSettings.json
+
+Context.cpp
+Context_Win32.cpp
+Context_X11.cpp
+
+Window_Win32.cpp
+Window_X11.cpp
