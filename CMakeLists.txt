@@ -13,8 +13,8 @@ endif(MSVS)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(gl++)
-set(OUTPUT gl++)
+project(glPlus)
+set(OUTPUT glPlus)
 
 include (Utils.cmake)
 SET(SRC "")
@@ -45,7 +45,7 @@ add_definitions(-DGLEW_STATIC)
 
 
 ### ext 
-include_directories("${CMAKE_SOURCE_DIR}/ext/z-logger")
+include_directories("${CMAKE_SOURCE_DIR}/ext")
 
 list(APPEND SRC src/GL/Error.cpp)
 list(APPEND SRC src/GL/VertexBuffer.cpp)
@@ -56,7 +56,6 @@ list(APPEND SRC src/GL/FrameBuffer.cpp)
 list(APPEND SRC src/GL/Shader.cpp)
 list(APPEND SRC src/GL/Program.cpp)
 
-list(APPEND SRC src/lib.cpp)
 list(APPEND INC src)
 
 list(APPEND INC "${CMAKE_SOURCE_DIR}/include")
