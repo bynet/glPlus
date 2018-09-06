@@ -1,0 +1,54 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Debug",
+            "type": "shell",
+            "options": {
+                "shell": {
+                    "executable":"cmd.exe",
+                    "args": [
+                        "/d","/c"
+                    ]
+                }
+            },
+            "command": "cmake",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "echo": true,
+                "panel": "new"
+            },
+            "problemMatcher":{
+                "owner": "cpp",
+                "fileLocation": "relative",
+                "pattern":[
+                    {
+                        //"regexp": "([\\w+|\\\\]*\\.\\w+)\\((\\d+)\\)\\: (warning|error) (.*)$",
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "location": 2,
+                        "severity": 3,
+                        "message": 4
+                    }
+                ]
+            },
+            "args": [
+               "--build",
+               "${workspaceRoot}/build",
+               "--config",
+               "Debug",
+               "--target",
+               "ALL_BUILD",
+               "--",
+               "/m",
+               "/property:GenerateFullPaths=true"
+            ]
+        }
+    ]
+}

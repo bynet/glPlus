@@ -25,8 +25,8 @@ find_package(OpenGL REQUIRED)
 list(APPEND LIB ${OPENGL_LIBRARY})
 
 ## SDL2 ###
-set(SDL2_ROOT "c:/projects/libs/SDL2")
-include_directories("${SDL2_ROOT}/include")
+#set(SDL2_ROOT "c:/projects/libs/SDL2")
+#include_directories("${SDL2_ROOT}/include")
 #link_directories("${SDL2_ROOT}/lib")
 #list(APPEND LIB SDL2d)
 #list(APPEND LIB SDL2maind)
